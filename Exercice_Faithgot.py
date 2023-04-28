@@ -1,13 +1,12 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[63]:
+# In[67]:
 
 
 import matplotlib.pyplot as plt
 import math
 import numpy
-from random import uniform
 
 from random import *
 
@@ -115,7 +114,7 @@ f_prim = lambda m : numpy.gradient(numpy.exp ((-m/10))*numpy.sin(m),m);
 detecteur_de_zero (f_prim,0,10,0.001,1000)
 
 
-# In[64]:
+# In[72]:
 
 
 #5 Algo de Monte Carlo pour trouver une valeur approchée de pi
@@ -132,8 +131,10 @@ pi = 4*nb_success/n
 print(pi)
 
 
-# In[65]:
+# In[73]:
 
+
+#5 Algo de Monte Carlo 
 
 def monte_carlo (fonction,d,f,nb_points):
     t = 0
@@ -144,16 +145,10 @@ def monte_carlo (fonction,d,f,nb_points):
     return result
 
 
-# In[66]:
+# In[74]:
 
 
 f=lambda x : numpy.exp ((-x/10))*numpy.sin(x)
 
 monte_carlo (f,0,10,100000)
-
-
-# In[ ]:
-
-
-
 
